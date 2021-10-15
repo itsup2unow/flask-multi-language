@@ -91,7 +91,7 @@ flask run
 
 ## Usage
 
-#### Open `config.py` and add your own supported languages.
+Open `config.py` and add your own supported languages.
 ```python
 class BaseConfig(object):
     # Here you can list all the languages ​​that you want to use in your application
@@ -103,9 +103,9 @@ class BaseConfig(object):
 ```
 If you need to be more specific, a country code can be added as well. For example, you could use `en-US`, `en-GB`, and `en-CA` to support American, British, and Canadian English as different languages.
 
-#### Mark all the texts that need translations in the source code.
+### Mark all the texts that need translations in the source code.
 
-> Marking Texts to Translate In Templates
+#### Marking Texts to Translate In Templates
 
 The way you will communicate to Babel that you want something translated in your templates will be by using the following format (parentheses preceded by an underscore).
 ```html
@@ -126,7 +126,7 @@ class MyForm(FlaskForm):
 	email = StringField(lazy_gettext('Email'), validators=[DataRequired()])
 ```
 
-> Marking Texts to Translate In Python Source Code
+#### Marking Texts to Translate In Python Source Code
 
 Flask uses `gettext` together with Babel. The idea of `gettext` is that you can mark certain strings as translatable and a tool will pick all those up, collect them in a separate file for you to translate.
 ```python
