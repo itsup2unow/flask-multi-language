@@ -78,9 +78,11 @@ source env/Scripts/activate
 pip install -r requirements.txt
 ```
 
-4. Start the web server
+4. Start the development web server
 ```
-python run.py
+export FLASK_APP=run.py
+export FLASK_ENV=development
+flask run
 ```
 
 ## Usage
